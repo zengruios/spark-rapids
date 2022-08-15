@@ -300,8 +300,5 @@ object RapidsBufferCatalog extends Logging with Arm {
   /** Remove a buffer ID from the catalog and release the resources of the registered buffer. */
   def removeBuffer(id: RapidsBufferId): Unit = singleton.removeBuffer(id)
 
-  /** Get diskBlockManager. */
-  def getDiskBlockManager(): RapidsDiskBlockManager = {
-    diskBlockManager
-  }
+  def getDiskBlockManager(): RapidsDiskBlockManager = diskBlockManager
 }
